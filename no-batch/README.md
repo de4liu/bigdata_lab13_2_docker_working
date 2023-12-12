@@ -137,9 +137,10 @@ In this case your base image is `frolvlad/alpine-miniconda3:python3.7`, let's br
 
 This image contains an [alpine](https://alpinelinux.org/) version of Linux, which is a distribution created to be very small in size. It also includes [miniconda](https://docs.conda.io/en/latest/miniconda.html) with Python 3. Notice that the tag let's you know that the specific version of Python being used is 3.7. Tagging is great as it allows you to create different versions of similar images.
 
-> Note: some blog suggest that you should not use alpine for production because you can have weird error. Instead, you could base on an official python image, e.g. python3.10.  
-
 You could use many different base images such as the official `python:3.7` image. However if you compared the size you will encounter it is a lot heavier. In this case you will be using the one mentioned above as it is a great minimal image for the task at hand.
+
+> Note: some blog suggest that you should not use alpine for production because you can have weird errors. Instead, you could base on an [official python image](https://hub.docker.com/_/python).  
+
 
 ### Installing dependencies
 Now that you have an environment with Python installed it is time to install all of the Python packages that your server will depend on. First you need to copy your local `requirements.txt` file into the image so it can be accessed by other processes, this can be done via the `COPY` instruction:
