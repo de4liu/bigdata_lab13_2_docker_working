@@ -29,13 +29,7 @@ Within the documentation, snippets of the files will be displayed with a descrip
 To clone this repo use the following command:
 
 ```bash
-git clone https://github.com/https-deeplearning-ai/machine-learning-engineering-for-production-public.git
-```
-
-or for cloning via SSH use:
-
-```bash
-git clone git@github.com:https-deeplearning-ai/machine-learning-engineering-for-production-public.git
+git clone https://github.com/de4liu/bigdata_lab13_2_docker_working.git
 ```
 
 --------
