@@ -1,6 +1,6 @@
 ## One prediction per request
 
-You can find all of the following code in the `no-batch/` directory. In your terminal `cd` to this directory to continue with the lab. If you are currently within the root of the repo you can use the command `cd course4/week2-ungraded-labs/C4_W2_Lab_1_FastAPI_Docker/no-batch/`.
+You can find all of the following code in the `no-batch/` directory. In your terminal `cd` to this directory to continue with the lab. 
 
 Notice that the server's code must be in the file `main.py` within a directory called `app`, following FastAPI's guidelines.
 
@@ -21,6 +21,8 @@ app = FastAPI(title="Predicting Wine Class")
 ```
 
 Now you need a way to represent a data point. You can do this by creating a class the subclasses from pydantic's `BaseModel` and listing each attribute along with its corresponding type.
+
+> **Pydantic** is the most widely used data validation library for Python. Pydandic allows you to define a data class with pre-specific attributes types and names. Input data is used to initilize the class. Pydandic does automatic data validation. If If validation fails, Pydantic will raise an error with a breakdown of what was wrong. So that you know, you cannot trust any input data from the Internet and must perform rigorous data validation. Pydandic takes away your burden of developing elaborate data validation. 
 
 In this case a data point represents a wine so this class is called `Wine` and all of the features of the model are of type `float`:
 
@@ -133,7 +135,9 @@ In this case your base image is `frolvlad/alpine-miniconda3:python3.7`, let's br
 - `alpine-miniconda3` is its name.
 - `python3.7` is the image's tag.
 
-This image contains an [alpine](https://alpinelinux.org/) version of Linux, which is a distribution created to be very small in size. It also includes [miniconda](https://docs.conda.io/en/latest/miniconda.html) with Python 3. Notice that the tag let's you know that the specific version of Python being used is 3.7. Tagging is great as it allows you to create different versions of similar images. In this case you could have this same image with a different version of Python such as 3.5.
+This image contains an [alpine](https://alpinelinux.org/) version of Linux, which is a distribution created to be very small in size. It also includes [miniconda](https://docs.conda.io/en/latest/miniconda.html) with Python 3. Notice that the tag let's you know that the specific version of Python being used is 3.7. Tagging is great as it allows you to create different versions of similar images.
+
+> Note: some blog suggest that you should not use alpine for production because you can have weird error. Instead, you could base on an official python image, e.g. python3.10.  
 
 You could use many different base images such as the official `python:3.7` image. However if you compared the size you will encounter it is a lot heavier. In this case you will be using the one mentioned above as it is a great minimal image for the task at hand.
 
