@@ -4,9 +4,7 @@ In this lab you will deploy a webserver that hosts a predictive model trained on
 
 In this lab we will use a trained wine-classifier that uses a [StandardScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html) and a [Random Forest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html) with a forest of 10 trees. We use this simple classifier so that our docker image can be built quickly and the file size is small.
 
-To run this lab, you need to have a docker engine. 
-
-We will use the cloud-based [Play with Docker](https://labs.play-with-docker.com)
+To run this lab, you need to have a docker engine. We will use a free cloud-based one [Play with Docker](https://labs.play-with-docker.com).
 
 ----
 
