@@ -1,4 +1,4 @@
-# Lab 13-2 Deploy a ML model with fastAPI and Docker
+# Lab 13-3 Deploy a ML model with fastAPI and Docker
 
 In this lab you will deploy a webserver that hosts a predictive model trained on the [wine dataset](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html#sklearn.datasets.load_wine) using [FastApi](https://fastapi.tiangolo.com/) and [Docker](https://www.docker.com/).
 
